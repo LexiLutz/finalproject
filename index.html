@@ -6,11 +6,14 @@
   <title> Where to go next? </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-  <link rel="stylesheet" href="stylesheet/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheet/main.css">
-  <link rel="stylesheet" href="stylesheet/highcharts.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/map.css">
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+
 
 
 </head>
@@ -21,8 +24,10 @@
 
 <!-- https://getbootstrap.com/docs/4.0/components/carousel/ -->
 
-
-<div class="container">
+<div class="container-fluid">
+  <div class="row justify-content-lg-center">
+         <section class="col col-lg-10 d-flex justify-content-center">
+<div class="container6">
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators" data-interval="3">
@@ -62,172 +67,279 @@
   </a>
 </div>
 </div>
-
-<!-- the style for this button was found on: https://stackoverflow.com/questions/34834457/multiple-buttons-only-showing-buttons-content-->
-
-<div class="row justify-content-lg-center">
-       <section class="col col-lg-10 d-flex justify-content-left">
-<button onclick="peak()">Peak Seasons</button>
 </section>
 </div>
+</div>
 
-  <div id="seasons" style="display:none">
+<!-- the style for this button was found on: https://mdbootstrap.com/docs/jquery/javascript/accordion/-->
+
 
 <div class="container-fluid">
-  <div class="row justify-content-lg-center">
-         <section class="col col-lg-10 d-flex justify-content-center">
-            <div id="map1"></div>
-          </section>
+  <div class="row justify-content-md-center">
+         <section class="col col-lg-6 d-flex justify-content-center">
+    <div class="container6">
+<div class="accordion md-accordion accordion-3 z-depth-1-half" id="accordionEx194" role="tablist"
+  aria-multiselectable="true">
+
+  <ul class="list-unstyled d-flex justify-content-center pt-5 red-text">
+    <li><i class="fas fa-anchor mr-3 fa-2x" aria-hidden="true"></i></li>
+    <li><i class="far fa-life-ring mr-3 fa-2x" aria-hidden="true"></i></li>
+    <li><i class="far fa-star fa-2x" aria-hidden="true"></i></li>
+  </ul>
+
+  <h3 class="text-center text-uppercase red-text py-4 px-3">Hello Nomads, expand the topic below to find your dream vacation!</h3>
+
+  <hr class="mb-0">
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading4">
+      <a data-toggle="collapse" data-parent="#accordionEx194" href="#collapse4" aria-expanded="true"
+        aria-controls="collapse4">
+        <div class="textwithin">
+        <h3 class="mb-0 mt-3">
+            Affordability
+
+            <i class="fas fa-angle-down rotate-icon fa-2x"></i>
+        </h3>
+        </div>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4"
+        data-parent="#accordionEx194">
+        <div class="textwithin">
+        <div class="card-body pt-0">
+            If affordability is your number one when ranking which destination you decide to travel to, you should scroll to the charts below.
+            The most expensive destinations are ranked from most to least. You can undoubtedly find a dream vacation on a budget to some of the most traveled to destinations.
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tablist" id="heading5">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse5"
+          aria-expanded="false" aria-controls="collapse5">
+          <div class="textwithin">
+          <h3 class="mb-0 mt-3">
+            Top Attractions
+            <i class="fas fa-angle-down rotate-icon fa-2x"></i>
+          </h3>
+        </div>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5"
+        data-parent="#accordionEx194">
+        <div class="card-body pt-0">
+          <div class="textwithin">
+          Are you looking for the top attractions to each of these destinations? Look no further! Scroll to the images below!
+          Each of the top-ranked destinations and their tourist attractions is pictured below. Find your picturesque getaway judging the book by its cover!  </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Accordion card -->
+
+<!-- Accordion card -->
+<div class="card">
+
+<!-- Card header -->
+<div class="card-header" role="tablist" id="heading6">
+  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse6"
+    aria-expanded="false" aria-controls="collapse6">
+    <div class="textwithin">
+    <h3 class="mb-0 mt-3">
+      Peak Season
+      <i class="fas fa-angle-down rotate-icon fa-2x"></i>
+    </h3>
+  </div>
+      </a>
+        </div>
+
+  <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6"
+      data-parent="#accordionEx194">
+        <div class="card-body pt-0">
+          <div class="textwithin">
+            Didn't take geography in Highschool? Not an issue! Just scroll down to our map to see where each of these locations are.
+            Click on the marker to see what the peak and low seasons are for that region of the world!   </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 
-  <div class="row justify-content-md-center">
-   <section class="col d-flex justify-content-center">
-      <p>This map was created by Lexi Lutz.</p>
-  </section>
-</div>
+  <div id="map"></div>
+  <h2>Top 19 Most Visited Cities (2018)</h2>
 
-  <div class="row justify-content-md-center">
-   <section class="col col-sm-4">
-  <p>This map shows the popular parks and monuments in Arizona. This allows you to easily locate the parks if you are
-  planning on a roadtrip around Arizona. These are lesser known areas so you are bound to have less foot traffic than more well-known sites. </p>
-</section>
-</div>
-</div>
-</div>
+  <div class="container-fluid">
+    <div class="row justify-content-lg-center">
+           <section class="col col-lg-10 d-flex justify-content-center">
+              <div id="map1"></div>
+            </section>
+    </div>
 
-<div class="row justify-content-lg-center">
-       <section class="col col-lg-10 d-flex justify-content-right">
-<button onclick="afford()">Affordability</button>
-</section>
-</div>
+    <div class="row justify-content-md-center">
+     <section class="col d-flex justify-content-center">
+       <div class="master">
+        <p> Click the markers to view low/peak seasons for each destination! This data was taken from Mastercard and their <a href="https://newsroom.mastercard.com/wp-content/uploads/2019/09/GDCI-Global-Report-FINAL-1.pdf ">Global Report (2019).</a>Looking at other websites this data may fluctuate.</p>
+      </div>
+    </section>
+  </div>
+  </div>
 
-<div id="visit" style="display:none">
-
-<figure class="highcharts-figure">
+  <div id="visit">
+<h2>Affordability Index</h2>
+  <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description">
-        Chart showing use of rotated axis labels and data labels. This can be a
-        way to include more labels in the chart, but note that more labels can
-        sometimes make charts harder to read.
-    </p>
+      The chart above has been included to show you the priciest destinations to the cheapest
+      quickly. The data above has been based on the average amount an individual spends 24 hours
+      at that destination. You can use this to quickly rule out the places that may be out of your
+      budget.</p>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="scripts/themes/gray.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 
     <div id="container1"></div>
     <p class="highcharts-description">
-        Chart showing stacked horizontal bars. This type of visualization is
-        great for comparing data that accumulates up to a sum.
+        If your priority is a less crowded romantic getaway, or maybe you want to explore the
+        destinations that are not "insta" famous. This chart allows you to see where most of the
+        foot traffic leads. This information was also sourced from Mastercard.
     </p>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/themes/sunset.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="scripts/themes/gray.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-</figure>
-</div>
 
+
+  </figure>
+  </div>
 <!-- Top attractions tab -->
 
+<h2>Top Attractions by City</h2>
+<div id="come">
 
-<button onclick="attractions()">Top Attractions</button>
-
-<div id="come" style="display:none">
-
-<img id="dubai" src="images/dubai.jpg" alt="Dubai">
-<a>Burj Khalifa, Dubai, UAE. Image source: <a href="https://commons.wikimedia.org/wiki/File:Dubai_Fountain_from_At_The_Top_of_Burj_Khalifa.JPG"
-  >Wikimedia Commons: CC BY-SA 3.0.</a>
-
-  <img id="barcelona" src="images/barcelona.jpg" alt="Barcelona">
-  <a>Sagrada Familia, Barcelona, Spain. Image source: <a href="https://commons.wikimedia.org/wiki/File:Σαγράδα_Φαμίλια_2941.jpg"
-    >Wikimedia Commons: CC BY-SA 3.0.</a>
+  <div class="europe">
+  <h3>Europe</h3>
 
 <img id="paris" src="images/paris.jpg" alt="Paris">
-  <a>Eiffel Tower, Paris, France. Image source: <a href="https://commons.wikimedia.org/wiki/File:Construction_tour_eiffel7.JPG"
-      >Wikimedia Commons: Public Domain.</a>
+  <p>Eiffel Tower, Paris, France. Image source: <a href="https://commons.wikimedia.org/wiki/File:Construction_tour_eiffel7.JPG">Wikimedia Commons: Public Domain.</a></p>
 
-<img id="singapore" src="images/singapore.jpg" alt="Singapore">
-  <a>Gardens by the Bay, Singapore. Image source: <a href="https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands_from_Gardens_By_The_Bay.jpg"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="phuket" src="images/phuket.png" alt="Phuket">
-  <a>Andaman Sea, Phuket, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Phuket_(Before).tif"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="mallorca" src="images/mallorca.jpg" alt="Mallorca">
-  <a>Cap de Formentor, Palma de Mallorca, Spain. Image source: <a href="https://commons.wikimedia.org/wiki/File:02017_0194_Formentor.jpg"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="osaka" src="images/osaka.jpg" alt="Osaka">
-  <a>Osaka Castle, Osaka, Japan. Image source: <a href="https://commons.wikimedia.org/wiki/File:Osakajo_ramparts_and_moat.jpg"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="hongkong" src="images/hongkong.jpg" alt="Hong Kong">
-  <a>Victorias Peak, Hong Kong SAR. Image source: <a href="https://commons.wikimedia.org/wiki/File:High_West_and_Victoria_Peak_from_Victoria_Gap_(crop1).jpg"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
-
-<img id="tokyo" src="images/tokyo.jpg" alt="Tokyo">
-  <a>Shibuya Crossing, Japan, Tokyo. Image source: <a href="https://commons.wikimedia.org/wiki/File:Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg"
-      >Wikimedia Commons: CC BY-SA 2.0.</a>
-
-<img id="bangkok" src="images/bangkok.jpg" alt="Bangkok">
-  <a>The Grand Palace, Bangkok, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Temple_of_the_Emerald_Buddha_2012.JPG"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
-
-<img id="pattaya" src="images/pattaya.jpg" alt="Pattaya">
-  <a>Temple of Truth, Pattaya, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Temple_of_Truth._Pattaya,_Thailand.png"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="seoul" src="images/seoul.jpg" alt="Seoul">
-  <a>Gyeongbokgung Palace, Seoul, South Korea. Image source: <a href="https://commons.wikimedia.org/wiki/File:역사속으로.jpg"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
-
-<img id="milan" src="images/milan.jpg" alt="Milan">
-  <a>Galleria Vittorio Emanuele II, Milan, Italy. Image source: <a href="https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II_-_evening.jpg"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
-
-<img id="newyork" src="images/newyork.jpg" alt="New York">
-  <a>Empire State Building, New York City, New York. Image source: <a href="https://commons.wikimedia.org/wiki/File:EmpireStateNewYokCity.jpg"
-      >Wikimedia Commons: CC BY-SA 2.0.</a>
 
 <img id="london" src="images/london.jpg" alt="London">
-  <a>The London Eye, London, UK. Image source: <a href="https://commons.wikimedia.org/wiki/File:London-Eye-2009.JPG"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
+  <p>The London Eye, London, UK. Image source: <a href="https://commons.wikimedia.org/wiki/File:London-Eye-2009.JPG">Wikimedia Commons: CC BY-SA 3.0.</a></p>
 
-<img id="makkah" src="images/makkah.jpg" alt="Makkah">
-  <a>Mecca, Makkah, Saudi Arabia. Image source: <a href="https://commons.wikimedia.org/wiki/File:Final_circulation_of_the_Kaaba.jpg"
-      >Wikimedia Commons: CC BY-SA 2.0.</a>
+<img id="barcelona" src="images/barcelona.jpg" alt="Barcelona">
+  <p>Sagrada Familia, Barcelona, Spain. Image source: <a href="https://commons.wikimedia.org/wiki/File:Sagrada_Familia_nave_roof_detail.jpg">Wikimedia Commons: CC BY-SA 2.0.</a></p>
+
+<img id="mallorca" src="images/mallorca.jpg" alt="Mallorca">
+  <p>Cap de Formentor, Palma de Mallorca, Spain. Image source: <a href="https://commons.wikimedia.org/wiki/File:02017_0194_Formentor.jpg">Wikimedia Commons: CC BY-SA 4.0.</a></p>
+
+<img id="milan" src="images/milan.jpg" alt="Milan">
+    <p>Galleria Vittorio Emanuele II, Milan, Italy. Image source: <a href="https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II_-_evening.jpg"
+      >Wikimedia Commons: CC BY-SA 3.0.</a></p>
+</div>
+
+<div class="asia">
+<h3>Asia</h3>
+
+<img id="singapore" src="images/singapore.jpg" alt="Singapore">
+  <p>Gardens by the Bay, Singapore. Image source: <a href="https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands_in_the_evening_-_20101120.jpg"
+      >Wikimedia Commons: CC BY-SA 3.0.</a></p>
+
+
+<img id="phuket" src="images/phuket.png" alt="Phuket">
+  <p>Andaman Sea, Phuket, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Phuket_(Before).tif"
+      >Wikimedia Commons: CC BY-SA 4.0.</a></p>
+
+<img id="osaka" src="images/osaka.jpg" alt="Osaka">
+  <p>Osaka Castle, Osaka, Japan. Image source: <a href="https://commons.wikimedia.org/wiki/File:Osakajo_ramparts_and_moat.jpg"
+      >Wikimedia Commons: CC BY-SA 4.0.</a></p>
+
+<img id="hongkong" src="images/hongkong.jpg" alt="Hong Kong">
+  <p>Victorias Peak, Hong Kong SAR. Image source: <a href="https://commons.wikimedia.org/wiki/File:High_West_and_Victoria_Peak_from_Victoria_Gap_(crop1).jpg"
+      >Wikimedia Commons: CC BY-SA 3.0.</a></p>
+
+<img id="tokyo" src="images/tokyo.jpg" alt="Tokyo">
+  <p>Shibuya Crossing, Japan, Tokyo. Image source: <a href="https://commons.wikimedia.org/wiki/File:Tokyo_Shibuya_Scramble_Crossing_2018-10-09.jpg"
+      >Wikimedia Commons: CC BY-SA 2.0.</a></p>
+<img id="bangkok" src="images/bangkok.jpg" alt="Bangkok">
+  <p>The Grand Palace, Bangkok, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Temple_of_the_Emerald_Buddha_2012.JPG"
+      >Wikimedia Commons: CC BY-SA 3.0.</a></p>
 
 <img id="bali" src="images/bali.jpg" alt="Bali">
-  <a>Uluwatu Temple, Bali, Indonesia. Image source: <a href="https://commons.wikimedia.org/wiki/File:Pura_Luhur_Uluwatu_2017-08-17_(34).jpg"
-      >Wikimedia Commons: CC BY-SA 4.0.</a>
+  <p>Uluwatu Temple, Bali, Indonesia. Image source: <a href="https://commons.wikimedia.org/wiki/File:Pura_Luhur_Uluwatu_2017-08-17_(34).jpg">Wikimedia Commons: CC BY-SA 4.0.</a></p>
 
-<img id="istanbul" src="images/istanbul.jpg" alt="Istanbul">
-  <a>Hagia Sophia Mosque, Istanbul, Turkey. Image source: <a href="https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
+<img id="pattaya" src="images/pattaya.jpg" alt="Pattaya">
+<p>Temple of Truth, Pattaya, Thailand. Image source: <a href="https://commons.wikimedia.org/wiki/File:Santuaryoftruth2.jpg">Wikimedia Commons: CC BY-SA 3.0.</a></p>
 
-<img id="anatalya" src="images/anatalya.jpg" alt="Anatalya">
-  <a>Upper Duden Falls, Anatalya, Turkey. Image source: <a href="https://commons.wikimedia.org/wiki/File:Upper_Duden_Falls.jpg"
-      >Wikimedia Commons: CC BY-SA 3.0.</a>
-
+  <img id="seoul" src="images/seoul.jpg" alt="Seoul">
+  <p>Gyeongbokgung Palace, Seoul, South Korea. Image source: <a href="https://commons.wikimedia.org/wiki/File:역사속으로.jpg">Wikimedia Commons: CC BY-SA 4.0.</a></p>
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div class="middleeast">
+<h3>Middle East</h3>
 
+  <img id="makkah" src="images/makkah.jpg" alt="Makkah">
+    <p>Mecca, Makkah, Saudi Arabia. Image source: <a href="https://commons.wikimedia.org/wiki/File:Final_circulation_of_the_Kaaba.jpg">Wikimedia Commons: CC BY-SA 2.0.</a></p>
+
+
+  <img id="istanbul" src="images/istanbul.jpg" alt="Istanbul">
+    <p>Hagia Sophia Mosque, Istanbul, Turkey. Image source: <a href="https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg">Wikimedia Commons: CC BY-SA 3.0.</a></p>
+
+      <img id="anatalya" src="images/anatalya.jpg" alt="Anatalya">
+        <p>Konyaaltı Beach, Anatalya, Turkey. Image source: <a href="https://commons.wikimedia.org/wiki/File:Antalyabeach.JPG">Wikimedia Commons: CC0.</a></p>
+
+    <img id="dubai" src="images/dubai.jpg" alt="Dubai">
+      <p>Burj Khalifa, Dubai, UAE. Image source: <a href="https://commons.wikimedia.org/wiki/File:Dubai_Fountain_from_At_The_Top_of_Burj_Khalifa.JPG">Wikimedia Commons: CC BY-SA 3.0.</a></p>
+
+      <h3>Americas</h3>
+
+      <img id="newyork" src="images/newyork.jpg" alt="New York">
+        <p>Empire State Building, New York City, New York. Image source: <a href="https://commons.wikimedia.org/wiki/File:EmpireStateNewYokCity.jpg">Wikimedia Commons: CC BY-SA 2.0.</a></p>
+      </div>
+</div>
+
+
+<section id="fullstop">
+  <p>This page was created by Lexi Lutz.</p>
+  <div id="links">
+<footer><p>All data taken from Mastercards <a href="https://newsroom.mastercard.com/wp-content/uploads/2019/09/GDCI-Global-Report-FINAL-1.pdf ">Global Report (2019).</a></p></footer>
+
+<footer><p>Supporting information was suplimented by the World Tourism Industry <a href="https://www.e-unwto.org/doi/pdf/10.18111/9789284419876">(UNWTO, 2018).</a></p></footer>
+</div>
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 <script src="scripts/places.js"></script>
 <script src="scripts/main.js"></script>
-<script src="scripts/main2.js"></script>
+<script src="scripts/map.js"></script>
+
 
 </body>
 </html>
